@@ -11,7 +11,7 @@ function App() {
             y: [1, 2.4, 3, 7, 5, 8, 9, 9, 9, 9, 9, 9],
             mode: 'lines',
             marker: { color: 'blue' },
-            name: 'Corporat DI',
+            name: 'Corporate DI',
         },
         {
             x: durationAnos,
@@ -111,8 +111,6 @@ function App() {
     const data = [...lineData, ...scatterData, ...boxplotData];
 
     const layout = {
-        width: 1200,
-        height: 500,
         title: 'Case C2P',
         xaxis: {
             title: { text: 'Duration Anos' },
@@ -128,7 +126,13 @@ function App() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-            <Plot data={data} layout={layout} />
+            <Plot
+                data={data}
+                layout={layout}
+                useResizeHandler={true}
+                style={{ width: '100%', height: '100%' }}
+                config={{ responsive: true }}
+            />
         </div>
     );
 }
