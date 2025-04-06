@@ -1,3 +1,6 @@
+//Código desenvolvido para o case teste C2P para a vaga de Estágio em Desenvolvimento Fullstack.
+//Código fonte: https://github.com/drgsantaana/case_c2p
+
 import React from 'react';
 import Plot from 'react-plotly.js';
 
@@ -126,11 +129,12 @@ function App() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <h1 className="text-2xl font-bold mb-4">Case C2P</h1>
             <Plot
                 data={data}
                 layout={layout}
                 useResizeHandler={true}
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '100%' }}
                 config={{ responsive: true }}
             />
         </div>
